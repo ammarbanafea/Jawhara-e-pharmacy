@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Menu | Jawhara</title>
+	
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600" rel="stylesheet">
+	  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+	
+</head>
+<body>
+      <nav>
+            <div>
+                  <i class="fa fa-bars"></i>
+            </div>
+		  
+            <ul>
+				 <li><a href="medications.php">Medications<i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                            <li><a href="#">Self Medications</a></li>
+                            <li><a href="#">Medicines</a></li>
+                            <li><a href="#">Specialty Medicines</a></li>
+                        </ul>
+                  </li>
+				
+				 <li><a href="#">Personal Care<i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                            <li><a href="#">Body and Hand</a></li>
+                            <li><a href="#">Oral Care</a></li>
+                            <li><a href="#">Paper Goods/Cotton</a></li>
+                        </ul>
+                  </li>
+				
+                  <li><a href="#">Medical Equipments<i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                            <li><a href="#">Health Monitors</a></li>
+                            <li><a href="#">Respiratory Equipments</a></li>
+                            <li><a href="#">Diabetes Care</a></li>
+							<li><a href="#">First Aid & Disposables</a></li>
+							<li><a href="#">Bedding & Furniture</a></li>
+							<li><a href="#">Mobility & Supports</a></li>
+                        </ul>
+					  </li>
+				
+                  <li><a href="#">Health Care<i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                            <li><a href="#">Beauty</a></li>
+                            <li><a href="#">Vitamins and Minerals</a></li>
+                            <li><a href="#">Sport Nutrition</a></li>
+							<li><a href="#">Men Health</a></li>
+							<li><a href="#">Women Health</a></li>
+							<li><a href="#">Kids Health</a></li>
+                        </ul>
+					  </li>
+
+					<li><a href="#">Hair Care<i class="fa fa-sort-desc"></i></a>
+							<ul>
+								<li><a href="#">Shampoo and Conditioner</a></li>
+								<li><a href="#">Hair Treatment</a></li>
+								<li><a href="#">Syling and Tools</a></li>
+							</ul>
+					  </li>
+				
+					<li><a href="#">Skin Care<i class="fa fa-sort-desc"></i></a>
+							<ul>
+								<li><a href="#">Cleanse</a></li>
+								<li><a href="#">Masks</a></li>
+								<li><a href="#">Body and Bath</a></li>
+								<li><a href="#">Sunscreen and Sun Protection</a></li>
+								<li><a href="#">Lips and Eye</a></li>
+							</ul>
+					  </li>
+            </ul>
+      </nav>
+
+      <script type="text/javascript">
+	  
+	  //jQuery to display mobile screen
+      $("nav div").click(function() {
+            $("ul").slideToggle();
+            $("ul ul").css("display", "none");
+      });
+
+      $("ul li").click(function() {
+            $("ul ul").slideUp();
+            $(this).find('ul').slideToggle();
+      });
+
+      $(window).resize(function() {
+            if($(window).width() > 768) {
+                  $("ul").removeAttr('style');
+            }
+      });
+
+      </script>
+</body>
+</html>
